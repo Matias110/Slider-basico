@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	
     <div class="slidershow">
     	<img src="img/1.jpg" id="photo">
     	<div class="btn">
@@ -15,27 +14,13 @@
     		<input type="button" value=">" onclick="next()">
     	</div>
     </div>
-
-
-  	
-	<script>
-		var num = 1;
-		var photo = document.getElementById('photo');
-
-        function next(){
-            num++;
-            if(num > 3)
-            	num = 1;
-            photo.src = `img/${num}.jpg`;  
-        }
-
-        function previous(){
-            num--;
-            if(num < 1)
-            	num = 3;
-            photo.src = `img/${num}.jpg`;
-
-        }
-	</script>
+    <script src="js/app.js"></script>
+    <script>
+      setInterval(() => {
+       num++;
+       if (num > 3) num = 1;
+       photo.src = `img/${num}.jpg`;
+      }, 4000);
+    </script>
 </body>
 </html>

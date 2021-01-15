@@ -1,47 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@mixin button($pad, $bg, $color){
-    padding: $pad;
-    background: $bg;
-    color: $color;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 0.4s;
+@mixin button($pad, $bg, $color) {
+  padding: $pad;
+  background: $bg;
+  color: $color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.4s;
 }
-
 .slidershow {
-	width: 100%;
-	max-width: 1000px;
-	height: auto;
-	position: relative;
-	margin: 30px auto;
-	border: 3px solid #fff;
-	box-shadow: 2px 2px 6px;
-	img {
-		width: 100%;
-		height: 100%;
-		display: block;
-	}
-	.btn {
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-between;
-       align-items: center;
-       input {
-          @include button(20px, #000, #fff);
-          &:hover {
-          	background: rgba(0,0,0,0.7);
-          }
-       } 
-	}
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  position: relative;
+  margin: 30px auto;
+  border: 3px solid #fff;
+  box-shadow: 2px 2px 6px;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    input {
+      @include button(20px, #000, #fff);
+      &:hover {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
 }
